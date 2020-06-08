@@ -1,0 +1,40 @@
+﻿<Window x:Class="BookStore.UserMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore"
+        mc:Ignorable="d"
+        Title="LibSys - @LoginInfo @Organization" 
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource TabButtonsStyle}" Background="Green">BOOKS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="Azure">ITEMS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="BlanchedAlmond">SHIFTS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="PaleVioletRed">USERS</Button>
+            </StackPanel>
+            <DataGrid>
+            </DataGrid>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            
+        </Grid>
+    </Grid>
+</Window>
