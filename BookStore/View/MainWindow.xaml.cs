@@ -10,6 +10,8 @@ namespace BookStore
         public MainWindow()
         {
             InitializeComponent();
+            Connection connection = new Connection();
+            connection.testDtb();
         }
     }
 }

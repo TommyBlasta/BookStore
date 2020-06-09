@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tom\\source\\repos\\BookStore\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\Eliss\\source\\repos\\TommyBlasta\\BookStore\\BookStore\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tom\\source\\repos\\BookStore\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\Eliss\\source\\repos\\TommyBlasta\\BookStore\\BookStore\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\BookStore\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\Eliss\\source\\repos\\TommyBlasta\\BookStore\\BookStore\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\Tom\\source\\repos\\BookStore\\BookStore\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\source\\repos\\BookStore\\BookStore\\obj\\",
+        "projectPath": "C:\\Users\\Eliss\\source\\repos\\TommyBlasta\\BookStore\\BookStore\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\Eliss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliss\\source\\repos\\TommyBlasta\\BookStore\\BookStore\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
