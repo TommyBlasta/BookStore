@@ -2,7 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
-using BookStore.Model;
+using BookStore;
 
 namespace BookStore
 {
@@ -20,12 +20,20 @@ namespace BookStore
                 connection.testDtb();
                 EntityConnection entity = new EntityConnection();
                 entity.AddBook();
-                
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            //passTextBox.SecurePassword()
         }
     }
 }

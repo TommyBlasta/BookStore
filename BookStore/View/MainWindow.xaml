@@ -25,12 +25,12 @@
                            TextAlignment="Center" 
                            VerticalAlignment="Top">LibSys Login</TextBlock>
                 <Label HorizontalContentAlignment="Center" >Username:</Label>
-                <TextBox Name="loginTextBlock" 
+                <TextBox Name="loginTextBox" 
                          Style="{StaticResource BasicTextBoxStyle}"/>
                 <Label HorizontalContentAlignment="Center">Password:</Label>
-                <PasswordBox Name="passTextBlock" Style="{StaticResource BasicTextBoxStyle}"/>
-                <Button Name="loginButton" Style="{StaticResource BasicButtonStyle}" Margin="10" Content="Login" Width="80"/>
-                <!--<Button Name="registerButton" Style="{StaticResource BasicButtonStyle}" Margin="5" Content="Register" Width="80" Click="RegisterButton_Click"/>-->
+                <PasswordBox Name="passTextBox" Style="{StaticResource BasicTextBoxStyle}"/>
+                <Button Name="loginButton" Style="{StaticResource BasicButtonStyle}" Margin="10" Content="Login" Width="80" Click="LoginButton_Click"/>
+                <Button Name="registerButton" Style="{StaticResource BasicButtonStyle}" Margin="5" Content="Register" Width="80" Click="RegisterButton_Click"/>
             </StackPanel>
         </Border>
 

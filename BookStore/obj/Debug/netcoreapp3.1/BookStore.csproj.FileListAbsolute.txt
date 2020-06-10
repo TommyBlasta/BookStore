@@ -48,7 +48,6 @@ C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\UserM
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.g.resources
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfoInputs.cache
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfo.cs
-C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CopyComplete
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
@@ -106,3 +105,12 @@ C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\obj\Debug\
 C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CopyComplete
 C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
 C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache

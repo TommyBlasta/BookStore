@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace BookStore.Model
+namespace BookStore
 {
     class EntityConnection
     {
-        public DbContextOptionsBuilder<BookstoreContext> optionsBuilder { get; set; }
-        public SqlConnectionStringBuilder sqlConnectionStringBldr { get; set; }
-    
+        private DbContextOptionsBuilder<BookstoreContext> optionsBuilder { get; set; }
+        private SqlConnectionStringBuilder sqlConnectionStringBldr { get; set; }
+        /// <summary>
+        /// Opens conncetion to database and maps entity objects
+        /// </summary>
         public EntityConnection()
         {
             optionsBuilder = new DbContextOptionsBuilder<BookstoreContext>();
@@ -22,6 +24,9 @@ namespace BookStore.Model
             sqlConnectionStringBldr.Password = "mot";
             optionsBuilder.UseSqlServer(sqlConnectionStringBldr.ConnectionString);
         }
+        /// <summary>
+        /// Hard code test
+        /// </summary>
         public void AddBook()
         {
             try

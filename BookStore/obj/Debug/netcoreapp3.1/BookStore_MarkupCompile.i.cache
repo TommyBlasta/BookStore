@@ -1,19 +1,19 @@
 ﻿BookStore
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\obj\Debug\netcoreapp3.1\
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\
 BookStore
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Eliss\source\repos\TommyBlasta\BookStore\BookStore\BookStore\App.xaml
+C:\Users\Tom\source\repos\BookStore\BookStore\App.xaml
 225452784
 
-11-1582358838
-211-1088531394
+15745362310
+218-1195169163
 View\MainWindow.xaml;View\UserMain.xaml;
 
 False
