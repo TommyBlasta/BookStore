@@ -14,6 +14,7 @@ namespace BookStore
         public BookstoreContext(DbContextOptions<BookstoreContext> options)
             : base(options)
         {
+            
         }
 
         public virtual DbSet<Books> Books { get; set; }
