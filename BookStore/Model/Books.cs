@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BookStore
+namespace BookStore.Data
 {
     public partial class Books
     {

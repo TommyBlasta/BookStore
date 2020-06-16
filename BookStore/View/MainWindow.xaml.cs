@@ -3,6 +3,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
 using BookStore;
+using BookStore.ErrorHandling;
+using BookStore.Model;
+using BookStore.ViewModel;
 
 namespace BookStore
 {
@@ -16,10 +19,27 @@ namespace BookStore
             InitializeComponent();
             try
             {
-                Connection connection = new Connection();
-                connection.testDtb();
-                EntityConnection entity = new EntityConnection();
-                entity.AddBook();
+                //Dtb connection tests
+
+                //Connection connection = new Connection();
+                //connection.testDtb();
+                //EntityConnection entity = new EntityConnection();
+                //entity.AddBook();
+
+                //Exception logger test
+                //var toThrow = new Exception("test_message");
+                //toThrow.Source = "test_source";
+                //ExceptionLogger.Log(toThrow);
+                //toThrow.Source = "test_source2";
+                //ExceptionLogger.Log(toThrow,false);
+
+                //PassHandler tests
+                //PasswordHandler.HashAndSaltPass("test1");
+
+                MainViewModel mainView = new MainViewModel();
+                MessageBox.Show(mainView.GetUsers.ToString());
+                
+                
             }
             catch (System.Exception ex)
             {

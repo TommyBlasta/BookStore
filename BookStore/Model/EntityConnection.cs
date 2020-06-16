@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
+using BookStore.Model;
+using BookStore.Data;
 
 namespace BookStore
 {
@@ -11,10 +13,11 @@ namespace BookStore
         private DbContextOptionsBuilder<BookstoreContext> optionsBuilder { get; set; }
         private SqlConnectionStringBuilder sqlConnectionStringBldr { get; set; }
         /// <summary>
-        /// Opens conncetion to database and maps entity objects
+        /// Opens conncetion to database
         /// </summary>
         public EntityConnection()
         {
+            //TODO simplify this
             optionsBuilder = new DbContextOptionsBuilder<BookstoreContext>();
             sqlConnectionStringBldr = new SqlConnectionStringBuilder();
             sqlConnectionStringBldr.IntegratedSecurity = false;
@@ -25,7 +28,7 @@ namespace BookStore
             optionsBuilder.UseSqlServer(sqlConnectionStringBldr.ConnectionString);
         }
         /// <summary>
-        /// Hard code test
+        /// Hard code test for entry INSERT
         /// </summary>
         public void AddBook()
         {

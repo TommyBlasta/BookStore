@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace BookStore
+namespace BookStore.Data
 {
     public partial class BookstoreContext : DbContext
     {
@@ -14,7 +14,6 @@ namespace BookStore
         public BookstoreContext(DbContextOptions<BookstoreContext> options)
             : base(options)
         {
-            
         }
 
         public virtual DbSet<Books> Books { get; set; }
@@ -68,6 +67,10 @@ namespace BookStore
 
             modelBuilder.Entity<Users>(entity =>
             {
+                entity.Property(e => e.HashSum)
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.HourWage).HasColumnType("decimal(18, 0)");
 
                 entity.Property(e => e.Name)
@@ -76,6 +79,10 @@ namespace BookStore
 
                 entity.Property(e => e.Position)
                     .HasMaxLength(70)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Salt)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Surname)

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BookStore
+namespace BookStore.Data
 {
     public partial class Users
     {
@@ -17,6 +17,8 @@ namespace BookStore
         public string Surname { get; set; }
         public string Position { get; set; }
         public decimal? HourWage { get; set; }
+        public string Salt { get; set; }
+        public string HashSum { get; set; }
 
         public virtual ICollection<Books> Books { get; set; }
         public virtual ICollection<Shifts> Shifts { get; set; }

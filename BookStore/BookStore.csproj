@@ -23,9 +23,7 @@
 
   <ItemGroup>
     <Folder Include="View\" />
-    <Folder Include="Model\" />
     <Folder Include="Data\" />
-    <Folder Include="ModelView\" />
   </ItemGroup>
 
 </Project>
