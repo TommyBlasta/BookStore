@@ -12,7 +12,7 @@ namespace BookStore.Model
     /// <summary>
     /// Static methods to handle passwords
     /// </summary>
-    static class PasswordHandler
+    class PasswordHandler
     {
         /// <summary>
         /// Accepts a string with user inputed password and returns a randomly generated salt
@@ -20,7 +20,7 @@ namespace BookStore.Model
         /// </summary>
         /// <param name="pass">User inputed password</param>
         /// <returns></returns>
-        public static HashWithSalt HashAndSaltPass(string pass)
+        public HashWithSalt HashAndSaltPass(string pass)
         {
             //byte array with random generated values
             byte[] salt= new byte[16];
@@ -49,7 +49,7 @@ namespace BookStore.Model
         /// <param name="userName">User name to match with password.</param>
         /// <param name="pass">Password to match with username.</param>
         /// <returns>The UserInfo instance of the confirmed user or NULL for mismatch.</returns>
-        static UserInfo ConfirmPassword (string userName, string pass)
+        public UserInfo ConfirmPassword (string userName, string pass)
         {
             return new UserInfo();
         }
