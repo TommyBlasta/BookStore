@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Tom\source\repos\BookStore\BookStore\App.xaml
-225452784
+4-1483126238
 
-17-684212501
+24-1595025982
 218-1195169163
-View\MainWindow.xaml;View\UserMain.xaml;
+View\BooksGrid.xaml;View\ItemsGrid.xaml;View\MainWindow.xaml;View\UserMain.xaml;
 
 False
 

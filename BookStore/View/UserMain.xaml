@@ -19,13 +19,14 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button Style="{StaticResource TabButtonsStyle}" Background="Green">BOOKS</Button>
-                <Button Style="{StaticResource TabButtonsStyle}" Background="Azure">ITEMS</Button>
-                <Button Style="{StaticResource TabButtonsStyle}" Background="BlanchedAlmond">SHIFTS</Button>
-                <Button Style="{StaticResource TabButtonsStyle}" Background="PaleVioletRed">USERS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="Green" Click="NavigationToBooks_ButtonClick">BOOKS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="Azure" Click="NavigationToItems_ButtonClick">ITEMS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="BlanchedAlmond" Click="NavigationToShifts_ButtonClick">SHIFTS</Button>
+                <Button Style="{StaticResource TabButtonsStyle}" Background="PaleVioletRed" Click="NavigationToUsers_ButtonClick">USERS</Button>
             </StackPanel>
-            <DataGrid>
-            </DataGrid>
+            <Grid x:Name="DataViewHolder_Grid">
+                
+            </Grid>
         </StackPanel>
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>

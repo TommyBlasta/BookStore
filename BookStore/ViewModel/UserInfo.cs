@@ -10,7 +10,7 @@ using System.Windows.Automation;
 
 namespace BookStore.ViewModel
 {
-    class UserInfo : ObservableObject
+    public class UserInfo : ObservableObject
     {
         public string Name { get; private set; }
         public Privilege UserPrivilege { get;private set; }
@@ -31,9 +31,10 @@ namespace BookStore.ViewModel
                 }
             }
         }
-        public UserInfo()
+        public UserInfo(string name, Privilege privilege)
         {
-
+            this.Name = name;
+            this.UserPrivilege = privilege;
         }
 
 

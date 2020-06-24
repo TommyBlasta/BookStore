@@ -7,14 +7,14 @@ using System.Windows;
 
 namespace BookStore
 {
-    class Connection
+    class SQLDirectConnection
     {
         private SqlConnectionStringBuilder builder { get; set; }
         private SqlConnection connection { get; set; }
         /// <summary>
         /// Opens connection to dtb
         /// </summary>
-        public Connection()
+        public SQLDirectConnection()
         {
             try
             {

@@ -49,7 +49,14 @@ namespace BookStore
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            //var testing = new BooksRepository();
+            //testing.RefreshViewPoint();
 
+            //For testing
+            var toOpen = new UserMain(new UserInfo("TestUser", Enums.Privilege.Admin));
+            toOpen.Show();
+            this.Close();
+            //TODO Check user credentials in dtb
         }
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {

@@ -4,10 +4,7 @@ using System.Text;
 
 namespace BookStore.Enums
 {
-    public enum Privilege
+    class ContentTab
     {
-        Admin,
-        Manager,
-        Clerk
     }
 }

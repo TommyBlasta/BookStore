@@ -51,7 +51,7 @@ namespace BookStore.Model
         /// <returns>The UserInfo instance of the confirmed user or NULL for mismatch.</returns>
         public UserInfo ConfirmPassword (string userName, string pass)
         {
-            return new UserInfo();
+            return null;
         }
         public static bool TrySaveUser(UserInfo givenInfo)
         {

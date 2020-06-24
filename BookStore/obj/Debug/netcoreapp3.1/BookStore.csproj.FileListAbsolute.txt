@@ -114,3 +114,7 @@ C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Newtonsoft
 C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Tom\source\repos\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BooksGrid.g.cs
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BooksGrid.baml
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\ItemsGrid.g.cs
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\ItemsGrid.baml

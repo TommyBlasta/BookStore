@@ -7,11 +7,23 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\BooksGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ItemsGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\BooksGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ItemsGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
