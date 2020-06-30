@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListView Name="MainListView" ItemsSource="{Binding Source=BooksRepository.BooksViewPoint}">
+        <ListView Name="MainListView" ItemsSource="{Binding Source=BooksRepository.BooksViewPoint}" SelectionChanged="MainListView_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="35" Header="Id" DisplayMemberBinding="{Binding Id}"></GridViewColumn>

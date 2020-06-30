@@ -28,7 +28,7 @@
                 
             </Grid>
         </StackPanel>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Name="ContentEditor_Grid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -36,6 +36,8 @@
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
             
+        </Grid>
+        <Grid Grid.Row="1" x:Name="ContentFilter_Grid">
         </Grid>
     </Grid>
 </Window>

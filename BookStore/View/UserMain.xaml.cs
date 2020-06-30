@@ -1,4 +1,6 @@
-﻿using BookStore.View;
+﻿using BookStore.Enums;
+using BookStore.ErrorHandling;
+using BookStore.View;
 using BookStore.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -20,15 +22,68 @@ namespace BookStore
     /// </summary>
     public partial class UserMain : Window
     {
+
+        Enums.ContentTab CurrentContentTab { get; set; }
         BooksRepository BooksRepo { get; set; }
+        public UserInfo ActiveUser {get;set;}
+        private Dictionary<Type,UserControl> ActiveControls { get; set; }
+
         public UserMain(UserInfo activeUser)
         {
-            BooksRepo = new BooksRepository();
-            InitializeComponent();
-
+            try
+            {
+                //Properties init
+                ActiveUser = activeUser;
+                ActiveControls = new Dictionary<Type, UserControl>();
+                //Data initialization
+                //TODO Add All repos
+                BooksRepo = new BooksRepository();
+                //XAML components init
+                InitializeComponent();
+                //Creating custom controls
+                ActiveControls.Add(typeof(BooksGrid), new BooksGrid(BooksRepo.BooksViewPoint));
+                ActiveControls.Add(typeof(BookContentEditor), new BookContentEditor());
+                ActiveControls.Add(typeof(BooksContentFilter), new BooksContentFilter(BooksRepo.BooksViewPoint));
+                //Set Books tab as active
+                CurrentContentTab = Enums.ContentTab.Books;
+                //
+                DataViewHolder_Grid.Children.Add(ActiveControls.GetValueOrDefault(typeof(BooksGrid)));
+                //set books filter as active
+                ContentFilter_Grid.Children.Add(ActiveControls.GetValueOrDefault(typeof(BooksContentFilter)));
+                //set books editor as active
+                ContentEditor_Grid.Children.Add(new BookContentEditor());
+            }
+            catch(Exception ex)
+            {
+                ExceptionLogger.Log(ex);
+            }
+        }
+        private void ChangeWindowContext(ContentTab contentTabToChangeTo)
+        {
+            switch (contentTabToChangeTo)
+            {
+                case ContentTab.Books:
+                    DataViewHolder_Grid.Children.Clear();
+                    ContentFilter_Grid.Children.Clear();
+                    ContentEditor_Grid.Children.Clear();
+                    DataViewHolder_Grid.Children.Add(ActiveControls.GetValueOrDefault(typeof(BooksGrid)));
+                    ContentFilter_Grid.Children.Add(ActiveControls.GetValueOrDefault(typeof(BooksContentFilter)));
+                    ContentEditor_Grid.Children.Add(new BookContentEditor());
+                    break;
+                case ContentTab.Items:
+                    throw new NotImplementedException();
+                    break;
+                case ContentTab.Shifts:
+                    throw new NotImplementedException();
+                    break;
+                case ContentTab.Users:
+                    throw new NotImplementedException();
+                    break;
+            }
         }
         private void NavigationToBooks_ButtonClick(object sender, RoutedEventArgs e)
         {
+            CurrentContentTab = Enums.ContentTab.Books;
             if (DataViewHolder_Grid.Children.Count > 0)
             {
                 DataViewHolder_Grid.Children.Clear();
@@ -37,6 +92,7 @@ namespace BookStore
         }
         private void NavigationToItems_ButtonClick(object sender, RoutedEventArgs e)
         {
+            CurrentContentTab = Enums.ContentTab.Items;
             if(DataViewHolder_Grid.Children.Count > 0)
             {
                 DataViewHolder_Grid.Children.Clear();
@@ -45,11 +101,12 @@ namespace BookStore
         }
         private void NavigationToShifts_ButtonClick(object sender, RoutedEventArgs e)
         {
+            CurrentContentTab = Enums.ContentTab.Shifts;
 
         }
         private void NavigationToUsers_ButtonClick(object sender, RoutedEventArgs e)
         {
-
+            CurrentContentTab = Enums.ContentTab.Users;
         }
     }
 }

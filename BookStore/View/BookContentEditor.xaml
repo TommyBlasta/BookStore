@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="BookStore.View.BookContentEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BookStore.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Style="{StaticResource ContentFilterLabelStyle}">Id</Label>
+                    <Label Style="{StaticResource ContentFilterLabelStyle}">Name</Label>
+                    <Label Style="{StaticResource ContentFilterLabelStyle}">Author</Label>
+                    <Label Style="{StaticResource ContentFilterLabelStyle}">Isbn</Label>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBox TextChanged="Id_TextChanged" Style="{StaticResource ContentEditorTextBoxStyle}" Name="Id_TextBox"></TextBox>
+                    <TextBox Style="{StaticResource ContentEditorTextBoxStyle}" Name="Name_TextBox"></TextBox>
+                    <TextBox Style="{StaticResource ContentEditorTextBoxStyle}" Name="Author_TextBox"></TextBox>
+                    <TextBox Style="{StaticResource ContentEditorTextBoxStyle}" Name="Isbn_TextBox"></TextBox>
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Name="IdChangeInfo_Label" Style="{StaticResource ContentFilterLabelStyle}">From DB</Label>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

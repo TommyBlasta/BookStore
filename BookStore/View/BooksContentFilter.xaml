@@ -7,6 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+       <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Id</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Name</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Author</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Isbn</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Base Price</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Publication Date</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Added Date</Label>
+                <Label Style="{StaticResource ContentFilterLabelStyle}">Added By</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+                <TextBox Style="{StaticResource ContentFilterTextBoxStyle}"></TextBox>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

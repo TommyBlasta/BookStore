@@ -6,6 +6,7 @@ using BookStore;
 using BookStore.ErrorHandling;
 using BookStore.Model;
 using BookStore.ViewModel;
+using BookStore.Converters;
 
 namespace BookStore
 {
@@ -37,9 +38,12 @@ namespace BookStore
                 //PasswordHandler.HashAndSaltPass("test1");
 
                 MainViewModel mainView = new MainViewModel();
-                MessageBox.Show(mainView.GetUsers.ToString());
-                
-                
+                var passHandler = new PasswordHandler();
+                var result = passHandler.HashAndSaltPass("abcd");
+                var result2 = passHandler.ConfirmPassword("Admin", "abcd", result);
+                //var byteConverter = new ByteConverter();
+                //var result = byteConverter.ToByteArray("023");
+                //var result2 = byteConverter.ToString(result);
             }
             catch (System.Exception ex)
             {

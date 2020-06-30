@@ -28,5 +28,9 @@ namespace BookStore.View
             MainListView.ItemsSource = BooksRepository;
 
         }
+        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

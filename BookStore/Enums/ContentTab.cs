@@ -4,7 +4,11 @@ using System.Text;
 
 namespace BookStore.Enums
 {
-    class ContentTab
+    enum ContentTab
     {
+        Books,
+        Items,
+        Shifts,
+        Users
     }
 }

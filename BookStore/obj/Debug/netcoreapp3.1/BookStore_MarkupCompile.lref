@@ -1,7 +1,9 @@
 ﻿
 FC:\Users\Tom\source\repos\BookStore\BookStore\App.xaml;;
-FC:\Users\Tom\source\repos\BookStore\BookStore\View\MainWindow.xaml;;
-FC:\Users\Tom\source\repos\BookStore\BookStore\View\UserMain.xaml;;
+FC:\Users\Tom\source\repos\BookStore\BookStore\View\BookContentEditor.xaml;;
+FC:\Users\Tom\source\repos\BookStore\BookStore\View\BooksContentFilter.xaml;;
 FC:\Users\Tom\source\repos\BookStore\BookStore\View\BooksGrid.xaml;;
 FC:\Users\Tom\source\repos\BookStore\BookStore\View\ItemsGrid.xaml;;
+FC:\Users\Tom\source\repos\BookStore\BookStore\View\MainWindow.xaml;;
+FC:\Users\Tom\source\repos\BookStore\BookStore\View\UserMain.xaml;;
 

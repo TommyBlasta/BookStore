@@ -118,3 +118,7 @@ C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\Books
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BooksGrid.baml
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\ItemsGrid.g.cs
 C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\ItemsGrid.baml
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BooksContentFilter.g.cs
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BooksContentFilter.baml
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BookContentEditor.g.cs
+C:\Users\Tom\source\repos\BookStore\BookStore\obj\Debug\netcoreapp3.1\View\BookContentEditor.baml

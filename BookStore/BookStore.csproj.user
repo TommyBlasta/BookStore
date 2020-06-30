@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\BookContentEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\BooksContentFilter.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\BooksGrid.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +24,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\BookContentEditor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BooksContentFilter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\BooksGrid.xaml">
       <SubType>Designer</SubType>
     </Page>

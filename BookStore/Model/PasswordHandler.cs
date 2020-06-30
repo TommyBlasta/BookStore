@@ -6,14 +6,32 @@ using BookStore.ViewModel;
 using System.Security.Cryptography;
 using Microsoft.IdentityModel.Tokens;
 using System.Windows;
+using System.Security.Policy;
+using System.Linq;
+using BookStore.Converters;
 
 namespace BookStore.Model
 {
     /// <summary>
     /// Static methods to handle passwords
     /// </summary>
-    class PasswordHandler
+    public class PasswordHandler
     {
+        private string Hash(string pass, string salt)
+        {
+            var rfc = new Rfc2898DeriveBytes(pass, Encoding.UTF8.GetBytes(salt));
+            byte[] hash = rfc.GetBytes(20);
+            return Encoding.UTF8.GetString(hash);
+        }
+        private string GenerateSalt()
+        {
+            byte[] salt = new byte[16];
+            using (var rngCsp = new RNGCryptoServiceProvider())
+            {
+                rngCsp.GetBytes(salt);
+            }
+            return Encoding.UTF8.GetString(salt);
+        }
         /// <summary>
         /// Accepts a string with user inputed password and returns a randomly generated salt
         /// hashsum of the combination.
@@ -22,26 +40,10 @@ namespace BookStore.Model
         /// <returns></returns>
         public HashWithSalt HashAndSaltPass(string pass)
         {
-            //byte array with random generated values
-            byte[] salt= new byte[16];
-            using (var rngCsp = new RNGCryptoServiceProvider())
-            {
-                rngCsp.GetBytes(salt);
-            }
-            //hashes the given pass with the generated salt
-            var rfc = new Rfc2898DeriveBytes(pass,salt);           
-            byte[] hash = rfc.GetBytes(20);
-
-            //FOR TESTING
-            //byte[] concatedPswHsh = new byte[36];
-            ////Adds salt from index 0 to the array concatedPswHsh starting at its index 0 and adds 16 bytes from salt 
-            //Array.Copy(salt, 0, concatedPswHsh, 0, 16);
-            ////Adds the hashed value.
-            //Array.Copy(hash, 0, concatedPswHsh, 16, 20);
-            //var finishedString = Convert.ToBase64String(concatedPswHsh);
-            //MessageBox.Show(finishedString);
-
-            return new HashWithSalt { Hash = Convert.ToBase64String(salt), Salt = Convert.ToBase64String(hash)};
+            var toReturn = new HashWithSalt();
+            toReturn.Salt = GenerateSalt();
+            toReturn.Hash = Hash(pass, toReturn.Salt);
+            return toReturn;
         }
         /// <summary>
         /// Checks the database if the entered user has the entered password.
@@ -49,8 +51,12 @@ namespace BookStore.Model
         /// <param name="userName">User name to match with password.</param>
         /// <param name="pass">Password to match with username.</param>
         /// <returns>The UserInfo instance of the confirmed user or NULL for mismatch.</returns>
-        public UserInfo ConfirmPassword (string userName, string pass)
+        public UserInfo ConfirmPassword (string userName, string inputedPass, HashWithSalt hashWithSalt)
         {
+            if(Hash(inputedPass,hashWithSalt.Salt)==hashWithSalt.Hash)
+            {
+                return new UserInfo("Admin", Enums.Privilege.Admin);
+            }
             return null;
         }
         public static bool TrySaveUser(UserInfo givenInfo)

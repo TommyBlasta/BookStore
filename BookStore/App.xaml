@@ -19,5 +19,38 @@
         <Setter Property="Width" Value="100"/>
         <!--<Setter Property="Background" Value="AntiqueWhite"/>-->
         </Style>
+        <Style x:Key="BasicLabelStyle" TargetType="Label">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="AntiqueWhite"/>
+        </Style>
+        <Style x:Key="ContentFilterTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BasicTextBoxStyle}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style x:Key="ContentFilterLabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource BasicLabelStyle}">
+
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="ContentEditorTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BasicTextBoxStyle}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style x:Key="ContentEditorLabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource BasicLabelStyle}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="ContentEditorTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Background" Value="AntiqueWhite"/>
+        </Style>
     </Application.Resources>
 </Application>

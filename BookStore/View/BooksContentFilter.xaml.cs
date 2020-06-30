@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BookStore.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,8 +20,10 @@ namespace BookStore.View
     /// </summary>
     public partial class BooksContentFilter : UserControl
     {
-        public BooksContentFilter()
+        ObservableCollection<BookInfo> BooksListView { get; set; }
+        public BooksContentFilter(ObservableCollection<BookInfo> listView)
         {
+            BooksListView = listView;
             InitializeComponent();
         }
     }
